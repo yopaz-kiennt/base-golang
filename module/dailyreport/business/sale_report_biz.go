@@ -23,7 +23,7 @@ func NewCreateToDoItemBiz(store CreateTodoItemStorage) *createBiz {
 	return &createBiz{store: store}
 }
 
-func (biz *saleReportBiz) CreateNewItem(ctx context.Context, data *todomodel.ToDoItem) error {
+func (biz *saleReportBiz) CreateSaleReport(ctx context.Context, data *todomodel.ToDoItem) error {
 	if data.Title == "" {
 		return errors.New("title can not be blank")
 	}
